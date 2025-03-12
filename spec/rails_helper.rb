@@ -70,7 +70,7 @@ RSpec.configure do |config|
 
   config.before(:each) do |ex|
     if ex.metadata[:type] == :feature && ENV["JS"] == "true"
-      Capybara.server = :puma, {Silent: true}
+      Capybara.server = :puma, { Silent: true }
       Capybara.current_driver = :selenium
     end
   end
