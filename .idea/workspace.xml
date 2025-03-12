@@ -5,10 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2ddba048-60b6-40a9-a858-67c72cab930a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/spec/features/posts/index_spec.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/posts_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/posts_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/posts/_row.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/posts/_row.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/posts/_new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/posts/_new.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/posts/_table.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/posts/_table.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/posts/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/posts/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/seeds.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/seeds.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +45,7 @@
     "RSpec.Create Post create a new post with valid inputs.executor": "Run",
     "RSpec.Index posts shows all posts.executor": "Run",
     "RSpec.Index posts when a post belongs to a blog, display the blog name with the post.executor": "Run",
+    "RSpec.Index posts when a post does not belong to a blog, display 'No Blog'.executor": "Run",
     "RSpec.Post validations.executor": "Run",
     "RSpec.Post.executor": "Run",
     "RSpec.create_spec.executor": "Run",
@@ -477,7 +480,7 @@
     <option name="version" value="3" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/rails_gauntlet@Index_posts_when_a_post_belongs_to_a_blog__display_the_blog_name_with_the_post.rcov" NAME="Index posts when a post belongs to a blog, display the blog name with the post Coverage Results" MODIFIED="1741811086308" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="rails_gauntlet" />
+    <SUITE FILE_PATH="coverage/rails_gauntlet@Index_posts_when_a_post_belongs_to_a_blog__display_the_blog_name_with_the_post.rcov" NAME="Index posts when a post belongs to a blog, display the blog name with the post Coverage Results" MODIFIED="1741811133607" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="rails_gauntlet" />
     <SUITE FILE_PATH="coverage/rails_gauntlet@Index_posts_shows_all_posts.rcov" NAME="Index posts shows all posts Coverage Results" MODIFIED="1741810957666" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="rails_gauntlet" />
     <SUITE FILE_PATH="coverage/rails_gauntlet@Post.rcov" NAME="Post Coverage Results" MODIFIED="1741808506687" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="rails_gauntlet" />
     <SUITE FILE_PATH="coverage/rails_gauntlet@Create_Post_Create_a_new_post_with_missing_title.rcov" NAME="Create Post Create a new post with missing title Coverage Results" MODIFIED="1741810131416" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="rails_gauntlet" />
@@ -487,5 +490,6 @@
     <SUITE FILE_PATH="coverage/rails_gauntlet@Create_Post_create_a_new_post_with_valid_inputs.rcov" NAME="Create Post create a new post with valid inputs Coverage Results" MODIFIED="1741809050965" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="rails_gauntlet" />
     <SUITE FILE_PATH="coverage/rails_gauntlet@Blog_posts_returns_all_posts_that_belong_to_this_blog.rcov" NAME="Blog#posts returns all posts that belong to this blog Coverage Results" MODIFIED="1741810771912" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="rails_gauntlet" />
     <SUITE FILE_PATH="coverage/rails_gauntlet@Post_validations.rcov" NAME="Post validations Coverage Results" MODIFIED="1741808530427" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="rails_gauntlet" />
+    <SUITE FILE_PATH="coverage/rails_gauntlet@Index_posts_when_a_post_does_not_belong_to_a_blog__display__No_Blog_.rcov" NAME="Index posts when a post does not belong to a blog, display 'No Blog' Coverage Results" MODIFIED="1741811168376" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="rails_gauntlet" />
   </component>
 </project>
