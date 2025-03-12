@@ -1,1 +1,5 @@
 <%= render_flash_stream %>
+<% if @post.persisted? %>
+  <%= turbo_stream.append "posts_table", partial: "posts/row", locals: {post: @post} %>
+<% end %>
+<%= turbo_stream.update "form", partial: "posts/new", locals: {post: @post.persisted? ? Post.new : @post} %>
