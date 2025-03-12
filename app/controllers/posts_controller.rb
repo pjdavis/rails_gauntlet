@@ -7,6 +7,7 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
+    @blogs = Blog.all
     respond_to do |format|
       if @post.save
         format.html { redirect_to posts_path, notice: "Post was successfully created." }
@@ -14,10 +15,12 @@ class PostsController < ApplicationController
       else
         flash.now[:alert] = "Post could not be created!"
         format.html do
-          @posts = Post.all
+          @posts = Post.includes(:blog).all
           render :index, status: :unprocessable_entity
         end
-        format.turbo_stream { render status: :unprocessable_entity }
+        format.turbo_stream {
+          render status: :unprocessable_entity
+        }
       end
     end
   end

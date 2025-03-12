@@ -13,6 +13,6 @@
 end
 
 10.times do |i|
-  preambe = rand(2) == 0 ? "Engineering" : "Marketing"
-  Post.create(title: "#{preambe} - Post Title", body: "Lorem ipsum #{i}")
+  preamble = rand(2) == 0 ? "Engineering" : "Marketing"
+  Post.create(title: "#{preamble} - Post Title", body: "Lorem ipsum #{i}")
 end
