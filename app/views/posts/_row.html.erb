@@ -8,4 +8,7 @@
   <td>
     <%= post.description %>
   </td>
+  <td>
+    <%= post.blog.present? ? post.blog.title : "No Blog" %>
+  </td>
 </tr>
