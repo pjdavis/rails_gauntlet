@@ -11,3 +11,8 @@
 ["Engineering", "Marketing"].each do |blog_name|
   Blog.find_or_create_by(title: blog_name)
 end
+
+10.times do |i|
+  preambe = rand(2) == 0 ? "Engineering" : "Marketing"
+  Post.create(title: "#{preambe} - Post Title", body: "Lorem ipsum #{i}")
+end
