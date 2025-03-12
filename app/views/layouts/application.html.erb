@@ -25,6 +25,9 @@
   <body>
     <main class="container mx-auto mt-28 px-5 flex">
       <%= yield %>
+      <%= turbo_frame_tag "flash" do %>
+        <%= render "layouts/flash" %>
+      <% end %>
     </main>
   </body>
 </html>

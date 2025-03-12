@@ -1,0 +1,14 @@
+<table class="min-w-full border border-gray-300 shadow-md rounded-lg overflow-hidden">
+  <thead class="bg-gray-100 text-gray-700 uppercase text-sm">
+  <tr>
+    <th class="px-4 py-2 text-left border-b">Id</th>
+    <th class="px-4 py-2 text-left border-b">Title</th>
+    <th class="px-4 py-2 text-left border-b">Description</th>
+  </tr>
+  </thead>
+  <tbody id="posts_table" class="divide-y divide-gray-200">
+    <% posts.each do |post| %>
+      <%= render "posts/row", post: post %>
+    <% end %>
+  </tbody>
+</table>

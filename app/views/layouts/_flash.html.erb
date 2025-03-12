@@ -1,0 +1,15 @@
+<% flash.each do |type, message| %>
+  <div data-controller="flash" data-flash-target="message" class="slide-in flex fixed z-[100] h-[48px] top-1 left-1 px-2 gap-x-4 items-center <%= type == "notice" ? 'bg-green-500' : 'bg-red-500'  %> rounded-[8px]">
+    <div class="flex flex-row items-center gap-x-2 " role="alert">
+      <span class="h-5 w-5">
+        <%= svg "icons/check-mark" %>
+      </span>
+      <span class="text-content-inverted-primary text-body-medium">
+        <%= message %>
+      </span>
+    </div>
+    <button id="close-toast" class="h-5 w-5" data-action="click->flash#close">
+      <%= svg "icons/close" %>
+    </button>
+  </div>
+<% end %>
