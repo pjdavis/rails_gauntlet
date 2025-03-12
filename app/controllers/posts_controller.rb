@@ -1,22 +1,33 @@
 class PostsController < ApplicationController
-    def index
-        @posts = Post.all
-        @post = Post.new
-    end
+  def index
+    @blogs = Blog.all
+    @posts = Post.includes(:blog).all
+    @post = Post.new
+  end
 
-    def create
-        @post = Post.new(post_params)
-        if @post.save
-          flash.now[:notice] = "Post successfully created!"
-        else
-          flash.now[:alert] = "Post could not be created!"
-          render status: 422
+  def create
+    @post = Post.new(post_params)
+    @blogs = Blog.all
+    respond_to do |format|
+      if @post.save
+        format.html { redirect_to posts_path, notice: "Post was successfully created." }
+        format.turbo_stream { flash.now[:notice] = "Post was successfully created." }
+      else
+        flash.now[:alert] = "Post could not be created!"
+        format.html do
+          @posts = Post.includes(:blog).all
+          render :index, status: :unprocessable_entity
         end
+        format.turbo_stream {
+          render status: :unprocessable_entity
+        }
+      end
     end
+  end
 
-    private
+  private
 
-    def post_params
-        params.require(:post).permit(:title, :description, :body)
-    end
+  def post_params
+    params.require(:post).permit(:title, :description, :body, :blog_id)
+  end
 end
